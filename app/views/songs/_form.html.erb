@@ -1,0 +1,25 @@
+<table>
+<%= form_for @song do |f| %>
+  <tr>
+    <td><%= f.label :title %></td>
+    <td><%= f.text_field :title %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :artist_name %></td>
+    <td><%= f.text_field :artist_name %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :genre %></td>
+    <td><%= f.text_field :genre %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :released, "Released?" %></td>
+    <td><%= f.check_box :released %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :release_year %></td>
+    <td><%= f.number_field :release_year %></td>
+  </tr>
+</table>
+<p> <%= f.submit class: 'button' %> </p>
+<% end %>

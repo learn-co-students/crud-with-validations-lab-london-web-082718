@@ -1,0 +1,12 @@
+<% content_for :title do %>
+<%= @song.title %>
+<% end %>
+
+<h1><%= @song.title %> </h1>
+<p>By: <%= @song.artist_name %></p>
+<p>Genre: <%= @song.genre %> </p>
+<p>Released: <%= @song.released ? "yes" : "not yet" %></p>
+<p>Release year: <%= @song.released ? @song.release_year : "N/A"  %> </p>
+<%= button_to "Edit song", edit_song_path, method: :get %><br>
+<%= button_to "Delete song", song_path, method: :delete %><br>
+<%= link_to "All songs", songs_path %>
