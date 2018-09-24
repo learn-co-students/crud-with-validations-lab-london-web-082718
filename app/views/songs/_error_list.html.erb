@@ -1,0 +1,8 @@
+<% if @song.errors.any? %>
+<h2>Please fix the following <%= pluralize(@song.errors.count, "error") %> and re-submit:</h2>
+<ul>
+  <% @song.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+  <% end %>
+</ul>
+<% end %>

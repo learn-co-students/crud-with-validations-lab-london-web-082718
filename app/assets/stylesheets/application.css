@@ -13,9 +13,27 @@
  *= require_tree .
  *= require_self
  */
+body {
+  font-size: 16px;
+  font-family: Arial, Helvetica, Sans-serif;
+}
 
 .field_with_errors {
   padding: 2px;
   background-color: red;
   display: table;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 10px;
+    border-collapse: collapse;
+}
+
+.button {
+    background-color: green;
+    color: white;
+    padding: 10px 10px;
+    font-size: 0.8em;
+    cursor: pointer;
 }
