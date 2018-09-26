@@ -1,0 +1,8 @@
+<h1>Song Details</h1>
+<p>Artist name: <%= @song.artist_name %></p>
+<p>Title: <%= @song.title %></p>
+<p>Release year: <%= @song.release_year %></p>
+<p>Genre: <%= @song.genre %></p>
+
+<%= button_to('Destroy', 'http://www.example.com',
+          method: "delete", remote: true, data: { confirm: 'Are you sure?', disable_with: 'loading...' })%>
