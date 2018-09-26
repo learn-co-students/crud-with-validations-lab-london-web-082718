@@ -13,6 +13,7 @@ RSpec.describe 'songs/edit', type: :feature do
 
   it 'renders the edit song form' do
     visit edit_song_path(song)
+    puts edit_song_path(song)
 
     form = find('form')
 
