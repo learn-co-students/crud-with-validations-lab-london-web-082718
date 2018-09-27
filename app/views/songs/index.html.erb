@@ -1,0 +1,22 @@
+<h1>Songs - Index page</h1>
+
+<div><%= link_to 'Create Song', new_song_path %></div>
+
+<h1>All songs</h1>
+
+<table border="1">
+  <tr>
+    <th>Title</th><th>Artist</th><th>Genre</th><th>Released?</th><th>Release Year</th>
+  </tr>
+  <tbody>
+  <% @songs.each do |song| %>
+  <tr>
+    <td><%= link_to song.title, song %></td>
+    <td><%= song.artist_name %></td>
+    <td><%= song.genre %></td>
+    <td><%= song.released ? 'Yes' : 'No' %></td>
+    <td><%= song.release_year %></td>
+  </tr>
+  <% end %>
+</tbody>
+</table><br>
